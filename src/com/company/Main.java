@@ -20,7 +20,7 @@ public class Main {
         //createText("Models");
         //Finds model code from file name
         //System.out.println(getModelCode(openFile("Models.txt",1),0));
-
+        System.out.println("test)");
         //System.out.println(getFileNames("C:\\Users\\locala.BUR5-S4VMDR4\\Desktop\\BuildTest\\Images\\tifs"));
 
         //System.out.println(getModelCode(getFileNames("C:\\Users\\locala.BUR5-S4VMDR4\\Desktop\\BuildTest\\Images\\tifs"),0));
