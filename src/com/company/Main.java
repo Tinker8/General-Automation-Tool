@@ -13,22 +13,27 @@ Can create text docs -
 public class Main {
 
     public static void main(String[] args) throws IOException {
+        //Set a default path
         //String pathname = "C:\\Users\\locala.BUR5-S4VMDR4\\Desktop\\BuildTest\\Images\\tifs";
+
         //Create new folder
         //createFolders("Names");
+
         //Create text file
         //createText("Models");
-        //Finds model code from file name
-        //System.out.println(getModelCode(openFile("Models.txt",1),0));
-        System.out.println("test)");
-        //System.out.println(getFileNames("C:\\Users\\locala.BUR5-S4VMDR4\\Desktop\\BuildTest\\Images\\tifs"));
 
-        //System.out.println(getModelCode(getFileNames("C:\\Users\\locala.BUR5-S4VMDR4\\Desktop\\BuildTest\\Images\\tifs"),0));
 
+
+        //Lists all images of the given model in the given directory
         //System.out.println(findAllModels("C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs","00m"));
-        //listNumbers();
 
-        System.out.println(ifLineExists("C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\\", "Models", "[Models]"));
+        //Test to check if a keyword can be found within a text file in directory
+        //System.out.println(ifLineExists("C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\\", "Models", "[Models]"));
+
+
+        //(WORKS) Test to create a directory based on image name
+        createDirectory("C:\\Users\\griffithsa\\Desktop\\New folder (2)\\","gbr00myyijd5jex(a)(a)jkx_1_0");
+        //System.out.println(getFilePath("gbr00myyijd5jex(a)(a)jkx_1_0"));
         try {
             //test(); //"cd C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\nmagick gbr00myyijd5jex(a)(a)jkx_1_0.tif gbr00myyijd5jex(a)(a)jkx_1_0.png"
             //System.out.println(openFile("C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\\","Models",0));
@@ -37,6 +42,31 @@ public class Main {
         }
 
 
+    }
+
+    public static void createDirectory(String path, String filename){
+
+        String temp = path + getFilePath(filename);
+        //System.out.println(temp);
+        createFolders(temp);
+    }
+
+    public static String getFilePath(String filename) {
+        /*final*/ String regex = "[a-z0-9]{3}";
+        //final String string = filename;
+        String temp = "";
+        /*final*/ Pattern pattern = Pattern.compile(regex);
+        /*final*/ Matcher matcher = pattern.matcher(filename);
+        //return "Full match: " + matcher.group(0);
+
+        while ( matcher.find()) /*(matcher.find())*/ {
+            //System.out.println("Full match: " + matcher.group(0));
+            //for (int i = 1; i <= matcher.groupCount(); i++) {
+            temp +=  matcher.group(0) + "\\";
+            //temp += "Group " + ": " + matcher.lastMatch();
+            //}
+        }
+        return temp;
     }
 
     public static String uscCodes(String filename){
@@ -149,8 +179,8 @@ public class Main {
     }
 
     //Creates a new folder with the given name
-    public static void createFolders(String pathname, String temp){
-        File dir = new File(pathname+temp); dir.mkdir();
+    public static void createFolders(String pathname, String foldernames){
+        File dir = new File(pathname+foldernames); dir.mkdir();
 
     }
 
@@ -164,6 +194,12 @@ public class Main {
         } catch (IOException e) {
             // do something
         }
+    }
+
+    //Creates a new folder with the given name
+    public static void createFolders(String pathname){
+        File dir = new File(pathname); dir.mkdirs();
+
     }
 
     public static void save() throws IOException {
