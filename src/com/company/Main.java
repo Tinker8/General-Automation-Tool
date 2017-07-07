@@ -1,5 +1,7 @@
 package com.company;
+
 import com.sun.org.apache.xpath.internal.operations.Bool;
+
 import java.util.regex.*;
 
 import javax.sound.midi.SysexMessage;
@@ -13,6 +15,9 @@ Can create text docs -
 public class Main {
 
     public static void main(String[] args) throws IOException {
+        String[] Markets = new String[30];
+        Markets[0] = "UK";
+
         //Set a default path
         //String pathname = "C:\\Users\\locala.BUR5-S4VMDR4\\Desktop\\BuildTest\\Images\\tifs";
 
@@ -22,29 +27,18 @@ public class Main {
         //Create text file
         //createText("Models");
 
-
-
         //Lists all images of the given model in the given directory
         //System.out.println(findAllModels("C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs","00m"));
 
         //Test to check if a keyword can be found within a text file in directory
         //System.out.println(ifLineExists("C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\\", "Models", "[Models]"));
 
-
-        //(WORKS) Test to create a directory based on image name
-        createDirectory("C:\\Users\\griffithsa\\Desktop\\New folder (2)\\","gbr00myyijd5jex(a)(a)jkx_1_0");
-        //System.out.println(getFilePath("gbr00myyijd5jex(a)(a)jkx_1_0"));
-        try {
-            //test(); //"cd C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\nmagick gbr00myyijd5jex(a)(a)jkx_1_0.tif gbr00myyijd5jex(a)(a)jkx_1_0.png"
-            //System.out.println(openFile("C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\\","Models",0));
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
-
-
+        //Test to create a directory based on image name
+        //createDirectory("C:\\Users\\griffithsa\\Desktop\\New folder (2)\\", "gbr00myyijd5jex(a)(a)jkx_1_0");
+        System.out.println(textExists("C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\\", "Models", "Italy"));
     }
 
-    public static void createDirectory(String path, String filename){
+    public static void createDirectory(String path, String filename) {
 
         String temp = path + getFilePath(filename);
         //System.out.println(temp);
@@ -52,70 +46,77 @@ public class Main {
     }
 
     public static String getFilePath(String filename) {
-        /*final*/ String regex = "[a-z0-9]{3}";
+        /*final*/
+        String regex = "[a-z0-9]{3}";
         //final String string = filename;
         String temp = "";
-        /*final*/ Pattern pattern = Pattern.compile(regex);
-        /*final*/ Matcher matcher = pattern.matcher(filename);
+        /*final*/
+        Pattern pattern = Pattern.compile(regex);
+        /*final*/
+        Matcher matcher = pattern.matcher(filename);
         //return "Full match: " + matcher.group(0);
 
-        while ( matcher.find()) /*(matcher.find())*/ {
+        while (matcher.find()) /*(matcher.find())*/ {
             //System.out.println("Full match: " + matcher.group(0));
             //for (int i = 1; i <= matcher.groupCount(); i++) {
-            temp +=  matcher.group(0) + "\\";
+            temp += matcher.group(0) + "\\";
             //temp += "Group " + ": " + matcher.lastMatch();
             //}
         }
         return temp;
     }
 
-    public static String uscCodes(String filename){
-        /*final*/ String regex = "[a-z0-9]{3}";
+    public static String uscCodes(String filename) {
+        /*final*/
+        String regex = "[a-z0-9]{3}";
         //final String string = filename;
         String temp = "";
-        /*final*/ Pattern pattern = Pattern.compile(regex);
-        /*final*/ Matcher matcher = pattern.matcher(filename);
+        /*final*/
+        Pattern pattern = Pattern.compile(regex);
+        /*final*/
+        Matcher matcher = pattern.matcher(filename);
         //return "Full match: " + matcher.group(0);
 
-        while ( matcher.find()) /*(matcher.find())*/ {
+        while (matcher.find()) /*(matcher.find())*/ {
             //System.out.println("Full match: " + matcher.group(0));
             //for (int i = 1; i <= matcher.groupCount(); i++) {
-            temp +=  matcher.group(0) + "\n";
+            temp += matcher.group(0) + "\n";
             //temp += "Group " + ": " + matcher.lastMatch();
             //}
         }
         return temp;
     }
 
-    public static void test() throws Exception{
+    public static void test() throws Exception {
         try {
-        ProcessBuilder builder = new ProcessBuilder(
-        //        "cmd.exe", "/c", "cd C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs && magick convert gbr00myyijd5jex(a)(a)jkx_1_0.tif[0] gbr00myyijd5jex(a)(a)jkx_1_0_converted.png");
-                            "cmd.exe", "/c", "cd C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\\Names && magick mogrify -path C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\\Names\\temp -resize 1600x900 *.png");
+            ProcessBuilder builder = new ProcessBuilder(
+                    //        "cmd.exe", "/c", "cd C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs && magick convert gbr00myyijd5jex(a)(a)jkx_1_0.tif[0] gbr00myyijd5jex(a)(a)jkx_1_0_converted.png");
+                    "cmd.exe", "/c", "cd C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\\Names && magick mogrify -path C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\\Names\\temp -resize 1600x900 *.png");
             builder.redirectErrorStream(true);
-        Process p = builder.start();
-        BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
-        String line;
-        while (true) {
-            line = r.readLine();
-            if (line == null) { break; }
-            System.out.println(line);
+            Process p = builder.start();
+            BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            String line;
+            while (true) {
+                line = r.readLine();
+                if (line == null) {
+                    break;
+                }
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
-    catch (IOException e){
-        e.printStackTrace();
-    }
-    }
 
-    public static void listNumbers(){
-        for (int i=1;i<100;i++){
+    public static void listNumbers() {
+        for (int i = 1; i < 100; i++) {
             if (i % 2 == 0) {
                 System.out.println(i);
             }
         }
     }
 
-    public static String getModelCode(String filename){
+    public static String getModelCode(String filename) {
         if (filename.length() > 5) return filename.substring(3, 6);
         else {
             return "Error"; //Improve error later
@@ -130,37 +131,49 @@ public class Main {
         File folder = new File(pathname);
         File[] listOfFiles = folder.listFiles();
 
-        for (int i=0; i < listOfFiles.length; i++) {
-                if (listOfFiles[i].isFile() && modelcode.equals(getModelCode(listOfFiles[i].getName()))) {
-                    //System.out.println("File " + listOfFiles[i].getName());
-                    fileNames += listOfFiles[i].getName() + "\n";
-                } else if (listOfFiles[i].isDirectory() && modelcode.equals(getModelCode(listOfFiles[i].getName()))) {
-                    //System.out.println("Directory " + listOfFiles[i].getName());
-                    //fileNames += listOfFiles[i].getName() + "(Folder)" + "\n";
-                    //add search sub directorys
-                }
+        for (int i = 0; i < listOfFiles.length; i++) {
+            if (listOfFiles[i].isFile() && modelcode.equals(getModelCode(listOfFiles[i].getName()))) {
+                //System.out.println("File " + listOfFiles[i].getName());
+                fileNames += listOfFiles[i].getName() + "\n";
+            } else if (listOfFiles[i].isDirectory() && modelcode.equals(getModelCode(listOfFiles[i].getName()))) {
+                //System.out.println("Directory " + listOfFiles[i].getName());
+                //fileNames += listOfFiles[i].getName() + "(Folder)" + "\n";
+                //add search sub directorys
+            }
         }
         return fileNames;
     }
 
-    public static boolean ifLineExists(String pathname, String filename, String match) throws IOException {
+    public static boolean textExists(String pathname, String filename, String match) throws IOException {
         Boolean temp = false;
+        //File temp2 = new File(pathname, filename);
+        FileReader file = new FileReader(pathname + filename + ".txt");
+        BufferedReader textReader = new BufferedReader(file);
+        String temp3 = textReader.readLine();
 
-        for (int i = 0; i < 2; i++){
+        while (temp3 != null) {
+            if (temp3.equals(match)) {
+                temp = true;
+            }
+            textReader.readLine();
+            System.out.println("test1");
+        }
+
+        /*for (int i = 0; i < 2; i++) {
             if (openFile(pathname, filename, i).equals(match) && openFile(pathname, filename, i) != null) {
                 temp = true;
             }
-        }
+        }*/
         return temp;
     }
 
     //Finds a given path, then every file/folder in that location
-    public static String getFileNames(String pathname){
+    public static String getFileNames(String pathname) {
         String fileNames = "";
         File folder = new File(pathname);
         File[] listOfFiles = folder.listFiles();
 
-        for (int i=0; i < listOfFiles.length; i++) {
+        for (int i = 0; i < listOfFiles.length; i++) {
             if (listOfFiles[i].isFile()) {
                 //System.out.println("File " + listOfFiles[i].getName());
                 fileNames += listOfFiles[i].getName() + "\n";
@@ -174,20 +187,21 @@ public class Main {
     }
 
     //Test to create folders/files structures and paths
-    public static void setupDatabase(){
+    public static void setupDatabase() {
 
     }
 
     //Creates a new folder with the given name
-    public static void createFolders(String pathname, String foldernames){
-        File dir = new File(pathname+foldernames); dir.mkdir();
+    public static void createFolders(String pathname, String foldernames) {
+        File dir = new File(pathname + foldernames);
+        dir.mkdir();
 
     }
 
     //Creates a new text file with the given name
-    public static void createText(String pathname, String filename){
-        try{
-            PrintWriter writer = new PrintWriter(pathname+filename+".txt", "UTF-8");
+    public static void createText(String pathname, String filename) {
+        try {
+            PrintWriter writer = new PrintWriter(pathname + filename + ".txt", "UTF-8");
             writer.println("[Models]");
             writer.println("gbr00myyijd5jex(a)(a)jkx_1_0");
             writer.close();
@@ -197,8 +211,9 @@ public class Main {
     }
 
     //Creates a new folder with the given name
-    public static void createFolders(String pathname){
-        File dir = new File(pathname); dir.mkdirs();
+    public static void createFolders(String pathname) {
+        File dir = new File(pathname);
+        dir.mkdirs();
 
     }
 
@@ -222,9 +237,11 @@ public class Main {
             return temp;
         }
 */
+
+    //public static
     //Reads reads a given line number from the given filename [filename, lineNumber]
     //Change path in future
-    public static String openFile(String pathname, String filename) throws IOException {
+    /*public static String openFile(String pathname, String filename) throws IOException {
         int noOfLines = 3;
         String[] textData = new String[noOfLines];
         String textd = "";
@@ -232,25 +249,23 @@ public class Main {
 
         try {
 
-            FileReader fr = new FileReader(pathname + filename+".txt");
+            FileReader fr = new FileReader(pathname + filename + ".txt");
             BufferedReader textReader = new BufferedReader(fr);
-
 
 
             for (i = 0; i < noOfLines; i++) {
                 //textData[i] = textReader.readLine();
                 String temp = textReader.readLine();
-                if (temp != null) textd += temp+"\n";
+                if (temp != null) textd += temp + "\n";
             }
             textReader.close();
 
-        }
-        catch(IOException e) {
+        } catch (IOException e) {
             System.out.println(e.getMessage());
         }
         //return textData[no];
         return textd;
-    }
+    }*/
 
     public static String openFile(String pathname, String filename, int no) throws IOException {
         int noOfLines = 3;
@@ -259,7 +274,7 @@ public class Main {
 
         try {
 
-            FileReader fr = new FileReader(pathname + filename+".txt");
+            FileReader fr = new FileReader(pathname + filename + ".txt");
             BufferedReader textReader = new BufferedReader(fr);
 
 
@@ -268,15 +283,14 @@ public class Main {
             }
             textReader.close();
 
-        }
-        catch(IOException e) {
+        } catch (IOException e) {
             System.out.println(e.getMessage());
         }
         return textData[no];
     }
 
     //Test to run external programs
-    public static void runExe(String temp){
+    public static void runExe(String temp) {
         String s = null;
 
         try {
@@ -303,8 +317,7 @@ public class Main {
             }
 
             System.exit(0);
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             System.out.println("exception happened - here's what I know: ");
             e.printStackTrace();
             System.exit(-1);
