@@ -40,7 +40,7 @@ public class HelloWorldJDBC
         }
         finally
         {
-            Conn.close();
+            Conn.close(); //closes
         }
     }
 }
