@@ -35,7 +35,7 @@ public class Main {
 
         //Test to create a directory based on image name
         //createDirectory("C:\\Users\\griffithsa\\Desktop\\New folder (2)\\", "gbr00myyijd5jex(a)(a)jkx_1_0");
-        System.out.println(textExists("C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\\", "Models", "Italy"));
+        //System.out.println(textExists("C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\\", "Models", "Italy"));
     }
 
     public static void createDirectory(String path, String filename) {
