@@ -19,6 +19,8 @@ public class Controller {
         frame.setPreferredSize(new Dimension(600, 400));
         frame.setLayout(new BorderLayout());
         frame.add(lpane, BorderLayout.CENTER);
+        frame.setContentPane(form.pnlMain);
+
         lpane.setBounds(0, 0, 600, 400);
         panelBlue.setBackground(Color.BLUE);
         panelBlue.setBounds(0, 0, 600, 400);
