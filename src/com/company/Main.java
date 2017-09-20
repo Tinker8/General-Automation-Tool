@@ -15,8 +15,8 @@ Can create text docs -
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        String[] Markets = new String[30];
-        Markets[0] = "UK";
+        //String[] Markets = new String[30];
+        //Markets[0] = "UK";
 
         //Set a default path
         //String pathname = "C:\\Users\\locala.BUR5-S4VMDR4\\Desktop\\BuildTest\\Images\\tifs";
@@ -38,15 +38,10 @@ public class Main {
         //System.out.println(textExists("C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\\", "Models", "Italy"));
     }
 
-<<<<<<< HEAD
         //System.out.println(ifLineExists("C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\\", "Models", "[Models]"));
-        try {
             //test(); //"cd C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\nmagick gbr00myyijd5jex(a)(a)jkx_1_0.tif gbr00myyijd5jex(a)(a)jkx_1_0.png"
             //System.out.println(openFile("C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\\","Models",0));
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
-=======
+
     public static void createDirectory(String path, String filename) {
 
 
