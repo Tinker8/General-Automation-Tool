@@ -39,6 +39,10 @@ public class Main {
     }
 
         //System.out.println(ifLineExists("C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\\", "Models", "[Models]"));
+        //System.out.println(findAllModels("C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs","00m"));
+        //listNumbers();
+        //test
+        System.out.println(ifLineExists("C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\\", "Models", "[Models]"));
             //test(); //"cd C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\nmagick gbr00myyijd5jex(a)(a)jkx_1_0.tif gbr00myyijd5jex(a)(a)jkx_1_0.png"
             //System.out.println(openFile("C:\\Users\\griffithsa\\Desktop\\BuildTest\\Images\\tifs\\","Models",0));
 
