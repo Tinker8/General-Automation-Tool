@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.company.Login">
-  <grid id="27dc6" binding="pnlMain" layout-manager="GridLayoutManager" row-count="7" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="pnlMain" layout-manager="GridLayoutManager" row-count="8" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
       <xy x="20" y="20" width="406" height="446"/>
@@ -10,7 +10,7 @@
     <children>
       <component id="caf55" class="javax.swing.JTextField" binding="txtUsername">
         <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
@@ -21,7 +21,7 @@
       </component>
       <component id="6ac58" class="javax.swing.JLabel">
         <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Login"/>
@@ -29,7 +29,7 @@
       </component>
       <component id="f27e9" class="javax.swing.JPasswordField" binding="txtPassword">
         <constraints>
-          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="4" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
@@ -41,7 +41,7 @@
       </component>
       <component id="c576e" class="javax.swing.JButton" binding="btnLogin">
         <constraints>
-          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Button"/>
@@ -49,29 +49,214 @@
       </component>
       <vspacer id="6d4bc">
         <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="2" row-span="2" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
       <vspacer id="bc731">
         <constraints>
-          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="7" column="1" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
       <hspacer id="908b5">
         <constraints>
-          <grid row="0" column="2" row-span="7" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="3" row-span="8" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
       </hspacer>
       <hspacer id="3a272">
         <constraints>
-          <grid row="0" column="0" row-span="7" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="0" row-span="7" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
       </hspacer>
       <vspacer id="bcd78">
         <constraints>
-          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+          <grid row="5" column="1" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
         </constraints>
       </vspacer>
+      <tabbedpane id="f8b6b" binding="tabbedPane1" default-binding="true">
+        <constraints>
+          <grid row="0" column="1" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="200"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="fd8c3" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="one&#10;"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="ae3a7" class="javax.swing.JButton" binding="button1" default-binding="true">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Button"/>
+                </properties>
+              </component>
+              <hspacer id="23255">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <vspacer id="7187b">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+            </children>
+          </grid>
+          <grid id="9f82d" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="two"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="8ad08" class="javax.swing.JTextArea" binding="testTextArea" default-binding="true">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <text value="test"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </tabbedpane>
+      <component id="9edf6" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="Abaddon"/>
+            <item value="Alchemist"/>
+            <item value="Ancient"/>
+            <item value="Apparition"/>
+            <item value="Anti-Mage"/>
+            <item value="Arc Warden"/>
+            <item value="Axe"/>
+            <item value="Bane"/>
+            <item value="Batrider"/>
+            <item value="Beastmaster"/>
+            <item value="Bloodseeker"/>
+            <item value="Bounty Hunter"/>
+            <item value="Brewmaster"/>
+            <item value="Bristleback"/>
+            <item value="Broodmother"/>
+            <item value="Centaur Warrunner"/>
+            <item value="Chaos Knight"/>
+            <item value="Chen"/>
+            <item value="Clinkz"/>
+            <item value="Clockwerk"/>
+            <item value="Crystal Maiden"/>
+            <item value="Dark Seer"/>
+            <item value="Dazzle"/>
+            <item value="Death Prophet"/>
+            <item value="Disruptor"/>
+            <item value="Doom"/>
+            <item value="Dragon Knight"/>
+            <item value="Drow Ranger"/>
+            <item value="Earth Spirit"/>
+            <item value="Earthshaker"/>
+            <item value="Elder Titan"/>
+            <item value="Ember Spirit"/>
+            <item value="Enchantress"/>
+            <item value="Enigma"/>
+            <item value="Faceless"/>
+            <item value="Void"/>
+            <item value="Gyrocopter"/>
+            <item value="Huskar"/>
+            <item value="Invoker"/>
+            <item value="Io"/>
+            <item value="Jakiro"/>
+            <item value="Juggernaut"/>
+            <item value="Keeper of the Light"/>
+            <item value="Kunkka"/>
+            <item value="Legion Commander"/>
+            <item value="Leshrac"/>
+            <item value="Lich"/>
+            <item value="Lifestealer"/>
+            <item value="Lina"/>
+            <item value="Lion"/>
+            <item value="Lone"/>
+            <item value="Druid"/>
+            <item value="Luna"/>
+            <item value="Lycan"/>
+            <item value="Magnus"/>
+            <item value="Medusa"/>
+            <item value="Meepo"/>
+            <item value="Mirana"/>
+            <item value="Monkey King"/>
+            <item value="Morphling"/>
+            <item value="Naga"/>
+            <item value="Siren"/>
+            <item value="Nature's Prophet"/>
+            <item value="Necrophos"/>
+            <item value="Night Stalker"/>
+            <item value="Nyx Assassin"/>
+            <item value="Ogre Magi"/>
+            <item value="Omniknight"/>
+            <item value="Oracle"/>
+            <item value="Outworld Devourer"/>
+            <item value="Phantom Assassin"/>
+            <item value="Phantom Lancer"/>
+            <item value="Phoenix"/>
+            <item value="Puck"/>
+            <item value="Pudge"/>
+            <item value="Pugna"/>
+            <item value="Queen of Pain"/>
+            <item value="Razor"/>
+            <item value="Riki"/>
+            <item value="Rubick"/>
+            <item value="Sand King"/>
+            <item value="Shadow Demon"/>
+            <item value="Shadow Fiend"/>
+            <item value="Shadow Shaman"/>
+            <item value="Silencer"/>
+            <item value="Skywrath Mage"/>
+            <item value="Slardar"/>
+            <item value="Slark"/>
+            <item value="Sniper"/>
+            <item value="Spectre"/>
+            <item value="Spirit Breaker"/>
+            <item value="Storm Spirit"/>
+            <item value="Sven"/>
+            <item value="Techies"/>
+            <item value="Templar Assassin"/>
+            <item value="Terrorblade"/>
+            <item value="Tidehunter"/>
+            <item value="Timbersaw"/>
+            <item value="Tinker"/>
+            <item value="Tiny"/>
+            <item value="Treant Protector"/>
+            <item value="Troll Warlord"/>
+            <item value="Tusk"/>
+            <item value="Underlord"/>
+            <item value="Undying"/>
+            <item value="Ursa"/>
+            <item value="Vengeful Spirit"/>
+            <item value="Venomancer"/>
+            <item value="Viper"/>
+            <item value="Visage"/>
+            <item value="Warlock"/>
+            <item value="Weaver"/>
+            <item value="Windranger"/>
+            <item value="Winter Wyvern"/>
+            <item value="Witch Doctor"/>
+            <item value="Wraith King"/>
+            <item value="Zeus"/>
+          </model>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>

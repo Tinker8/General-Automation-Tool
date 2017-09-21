@@ -9,8 +9,13 @@ public class Login extends Component {
     private JPasswordField txtPassword;
     private JButton btnLogin;
     public JPanel pnlMain;
+    private JTabbedPane tabbedPane1;
+    private JButton button1;
+    private JTextArea testTextArea;
+    private JComboBox comboBox1;
     private String password = "test";
     public JPanel test1 = new JPanel(new GridLayout(2,1));
+
 
     public Login() {
         //test1.add(txtUsername);
@@ -21,7 +26,9 @@ public class Login extends Component {
         btnLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                pnlMain.setBackground(Color.blue);
+                //pnlMain.setBackground(Color.blue);
+                //frame.setContentPane(form.pnlMain);
+                //pnlMain.
 
                 String pw = txtPassword.getText();
                 String user = txtUsername.getText();

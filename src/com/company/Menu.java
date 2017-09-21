@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 public class Menu {
     private JTextField textField1;
-    private JPanel panel1;
+    public JPanel panel1;
     private JButton button1;
 
     public Menu() {

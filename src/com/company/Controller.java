@@ -1,6 +1,9 @@
 package com.company;
 
+import jdk.nashorn.internal.objects.Global;
+
 import javax.swing.*;
+import javax.xml.bind.annotation.XmlElementDecl;
 import java.awt.*;
 
 /**
@@ -13,6 +16,8 @@ public class Controller {
     private JPanel panelBlue = new JPanel();
     private JPanel panelGreen = new JPanel();
     private Login form = new Login();
+    private Menu form2 = new Menu();
+    public String testPanel = "";
 
     public Controller() {
 
@@ -20,6 +25,8 @@ public class Controller {
         frame.setLayout(new BorderLayout());
         frame.add(lpane, BorderLayout.CENTER);
         frame.setContentPane(form.pnlMain);
+        if (testPanel.equals("2")) frame.setContentPane(form2.panel1);
+        else frame.setContentPane(form.pnlMain);
 
         lpane.setBounds(0, 0, 600, 400);
         panelBlue.setBackground(Color.BLUE);
