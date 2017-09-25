@@ -13,6 +13,7 @@ public class Login extends Component {
     private JButton button1;
     private JTextArea testTextArea;
     private JComboBox comboBox1;
+    private JTextArea txtArea1;
     private String password = "test";
     public JPanel test1 = new JPanel(new GridLayout(2,1));
 
@@ -38,6 +39,12 @@ public class Login extends Component {
 
 
                 }
+            }
+        });
+        comboBox1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (comboBox1.getModel().equals("Sven")) txtArea1.setText("Sven");
             }
         });
     }
