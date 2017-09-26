@@ -1,0 +1,82 @@
+class dota2api.Initialise(api_key=None, executor=None, language=None, logging=None, raw_mode=None)[source]
+When calling this you need to provide the api_key You can also specify a language
+
+Parameters:	
+api_key – (str) string with the api key
+logging – (bool, optional) set this to True for logging output
+raw_mode – (bool, optional) get the raw data from dota2 API without parsing it into human-readable string
+get_game_items(**kwargs)[source]
+Returns a dictionary of in-game items, used to parse ids into localised names
+
+Returns:	dictionary of items, see responses
+get_heroes(**kwargs)[source]
+Returns a dictionary of in-game heroes, used to parse ids into localised names
+
+Returns:	dictionary of heroes, see responses
+get_league_listing()[source]
+Returns a dictionary containing a list of all ticketed leagues
+
+Returns:	dictionary of ticketed leagues, see responses
+get_live_league_games()[source]
+Returns a dictionary containing a list of ticked games in progress
+
+Returns:	dictionary of live games, see responses
+get_match_details(match_id=None, **kwargs)[source]
+Returns a dictionary containing the details for a Dota 2 match
+
+Parameters:	match_id – (int, optional)
+Returns:	dictionary of matches, see responses
+get_match_history(account_id=None, **kwargs)[source]
+Returns a dictionary containing a list of the most recent Dota matches
+
+Parameters:	
+account_id – (int, optional)
+hero_id – (int, optional)
+game_mode – (int, optional) see ref/modes.json
+skill – (int, optional) see ref/skill.json
+min_players – (int, optional) only return matches with minimum amount of players
+league_id – (int, optional) for ids use get_league_listing()
+start_at_match_id – (int, optional) start at matches equal to or older than this match id
+matches_requested – (int, optional) defaults to 100
+tournament_games_only – (str, optional) limit results to tournament matches only
+Returns:	
+dictionary of matches, see responses
+
+get_match_history_by_seq_num(start_at_match_seq_num=None, **kwargs)[source]
+Returns a dictionary containing a list of Dota matches in the order they were recorded
+
+Parameters:	
+start_at_match_seq_num – (int, optional) start at matches equal to or older than this match id
+matches_requested – (int, optional) defaults to 100
+Returns:	
+dictionary of matches, see responses
+
+get_player_summaries(steamids=None, **kwargs)[source]
+Returns a dictionary containing a player summaries
+
+Parameters:	steamids – (list) list of 32-bit or 64-bit steam ids, notice that api will convert if 32-bit are given
+Returns:	dictionary of player summaries, see responses
+get_team_info_by_team_id(start_at_team_id=None, **kwargs)[source]
+Returns a dictionary containing a in-game teams
+
+Parameters:	
+start_at_team_id – (int, optional)
+teams_requested – (int, optional)
+Returns:	
+dictionary of teams, see responses
+
+get_top_live_games(partner='', **kwargs)[source]
+Returns a dictionary that includes top MMR live games
+
+Parameters:	partner – (int, optional)
+Returns:	dictionary of prize pools, see responses
+get_tournament_prize_pool(leagueid=None, **kwargs)[source]
+Returns a dictionary that includes community funded tournament prize pools
+
+Parameters:	leagueid – (int, optional)
+Returns:	dictionary of prize pools, see responses
+update_game_items()[source]
+Update the item reference data via the API
+
+update_heroes()[source]
+Update the hero reference data via the API

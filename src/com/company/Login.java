@@ -10,15 +10,17 @@ public class Login extends Component {
     private JButton btnLogin;
     public JPanel pnlMain;
     private JTabbedPane tabbedPane1;
-    private JButton button1;
     private JTextArea testTextArea;
     private JComboBox comboBox1;
     private JTextArea txtArea1;
     private JLabel lblHeroes;
+    private JLabel lblHistory;
     private String password = "test";
     public JPanel test1 = new JPanel(new GridLayout(2,1));
+    private String apiKey = "CC2E5318BE6B4F2BDDEAF218AFBEE256";
 
     public Login() {
+
         //test1.add(txtUsername);
         //test1.add(txtPassword);
         //test1.add(btnLogin);
@@ -51,6 +53,8 @@ public class Login extends Component {
                 ImageIcon image = new ImageIcon("C:\\Users\\griffithsa\\Documents\\GitHub\\General-Automation-Tool\\src\\com\\company\\Images/" + name + "_full.png");
                 //lblHeroes = new JLabel("",image,JLabel.CENTER);
                 lblHeroes.setIcon(image);
+                //https://api.steampowered.com/IDOTA2Match_570/GetMatchHistory/V001/?key=<key>
+                //lblHistory.set
                 //pnlMain.add(lblHeroes,BorderLayout.CENTER);
             }
         });
