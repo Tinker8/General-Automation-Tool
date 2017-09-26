@@ -14,9 +14,9 @@ public class Login extends Component {
     private JTextArea testTextArea;
     private JComboBox comboBox1;
     private JTextArea txtArea1;
+    private JLabel lblHeroes;
     private String password = "test";
     public JPanel test1 = new JPanel(new GridLayout(2,1));
-
 
     public Login() {
         //test1.add(txtUsername);
@@ -44,7 +44,14 @@ public class Login extends Component {
         comboBox1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (comboBox1.getModel().equals("Sven")) txtArea1.setText("Sven");
+                //if (comboBox1.getSelectedItem().equals("Sven")) txtArea1.setText("Sven");
+                String temp = comboBox1.getSelectedItem().toString();
+                String name = temp.replaceAll(" ", "_");
+                txtArea1.setText(temp);
+                ImageIcon image = new ImageIcon("C:\\Users\\griffithsa\\Documents\\GitHub\\General-Automation-Tool\\src\\com\\company\\Images/" + name + "_full.png");
+                //lblHeroes = new JLabel("",image,JLabel.CENTER);
+                lblHeroes.setIcon(image);
+                //pnlMain.add(lblHeroes,BorderLayout.CENTER);
             }
         });
     }
